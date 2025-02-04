@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Will You Be My Valentine?</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 100px;
+      background-color: #f9e3e3;
+    }
+    h1 {
+      color: #d9534f;
+    }
+    .button-container {
+      margin-top: 20px;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin: 10px;
+    }
+    #yes-button {
+      background-color: #5cb85c;
+      color: white;
+    }
+    #no-button {
+      background-color: #7f2b3c;
+      color: white;
+      position: absolute;
+    }
+  </style>
+</head>
+<body>
+  <h1>Will You Be My Valentine?</h1>
+  <div class="button-container">
+    <button id="yes-button">Yes</button>
+    <button id="no-button">No</button>
+  </div>
+
+  <script>
+    const noButton = document.getElementById('no-button');
+    const yesButton = document.getElementById('yes-button');
+
+    noButton.addEventListener('mouseover', () => {
+      const x = Math.random() * (window.innerWidth - noButton.offsetWidth);
+      const y = Math.random() * (window.innerHeight - noButton.offsetHeight);
+      noButton.style.left = x + 'px';
+      noButton.style.top = y + 'px';
+    });
+
+    yesButton.addEventListener('click', () => {
+      alert("I knew you would say yes:) Let's go on a virtual RAS date around 14th February!");
+    });
+  </script>
+</body>
+</html>
